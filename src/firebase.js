@@ -9,8 +9,15 @@ const auth = firebase.auth();
 const storage = firebase.storage();
 
 const signInWithGoogle = () => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  auth.signInWithPopup(provider);
+  if (auth.currentUser === null) {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider);
+  }
 };
 
-export { db, auth, storage, signInWithGoogle };
+const signOut = () => {
+  auth.currentUser && auth.signOut();
+  alert("You have Signed out!");
+};
+
+export { db, auth, storage, signInWithGoogle, signOut };
