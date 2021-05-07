@@ -8,4 +8,4 @@ Screenshot (Website view):
 ![website screenshot](https://github.com/saikrishnadas/snapbook/blob/main/Screenshot-web.png)
 
 Screenshot (Mobile web view):
-![website screenshot](https://github.com/saikrishnadas/snapbook/blob/main/Screenshot-mobile.jgp)
+![website screenshot](https://github.com/saikrishnadas/snapbook/blob/main/Screenshot-mobile.jpg)
