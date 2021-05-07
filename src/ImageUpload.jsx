@@ -57,7 +57,7 @@ function ImageUpload({ username }) {
       <progress className="imageupload__progress" value={progress} max="100" />
       <input
         type="text"
-        placeholder="Enter the caption"
+        placeholder="Enter the caption..."
         onChange={(event) => setCaption(event.target.value)}
         value={caption}
       />

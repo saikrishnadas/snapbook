@@ -3,23 +3,28 @@
 }
 
 .app {
-  background-color: #fafafa;
+  background-image: linear-gradient(
+    to right top,
+    #f2f7ff,
+    #d5dafe,
+    #d0b7f4,
+    #da8ed9,
+    #e75cab
+  );
 }
 
 .app__header {
   object-fit: contain;
-  background-color: white;
   padding: 20px;
-  border-bottom: 1px solid lightgray;
   display: flex;
   justify-content: space-between;
 }
 
 .header__image {
   object-fit: contain;
+  width: 120px;
 }
 
 .app__body {
   padding: 20px;
-  margin-left: 20%;
 }

@@ -5,6 +5,7 @@ import { db, signInWithGoogle, auth, signOut } from "./firebase";
 import { Button } from "@material-ui/core";
 import { useAuthState } from "react-firebase-hooks/auth";
 import ImageUpload from "./ImageUpload";
+import Logo from "./Snapbook.svg";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -25,13 +26,9 @@ function App() {
   return (
     <div className="app">
       <div className="app__header">
-        <img
-          className="header__image"
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          alt=""
-        />
+        <img className="header__image" src={Logo} alt="" />
         <Button onClick={user ? signOut : signInWithGoogle}>
-          {user ? "SignOut" : "SignIn"}
+          {user ? "SignOut" : "Login"}
         </Button>
       </div>
 
@@ -48,7 +45,13 @@ function App() {
         ))}
       </div>
       <div className="body__upload">
-        {auth.currentUser && <ImageUpload username={user?.displayName} />}
+        {auth.currentUser ? (
+          <ImageUpload username={user?.displayName} />
+        ) : (
+          <h2 style={{ textAlign: "center", paddingBottom: "10px" }}>
+            Login to Upload images and comment!
+          </h2>
+        )}
       </div>
     </div>
   );
