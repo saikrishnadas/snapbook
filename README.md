@@ -2,7 +2,7 @@
 
 Snapbook is a Social media platform that you can upload images and comment on other peoples images.
 
-check snapbook :👉 wwww.snapbook-758f2.firebaseapp.com 👈
+check snapbook :👉 https://snapbook-758f2.firebaseapp.com/ 👈
 
 Created using React ⚛️ and firebase 🔥
 
